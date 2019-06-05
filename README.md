@@ -1,4 +1,6 @@
-# UET
-Unity Editor Tools
+# UnityScript
 
-#### [创建 *.asset 资源](https://github.com/fasthro/UET/blob/master/Assets/UET/Editor/CreateAssetEditor.cs)
+
+
+*  [创建 *.asset 资源工具](Assets/UnityScript/Editor/CreateAssetEditor.cs)
+*  [Tags/Layers 代码设置](Assets/UnityScript/Editor/TagOperation.cs)
