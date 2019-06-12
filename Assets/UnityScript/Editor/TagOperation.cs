@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-namespace UnityScript
+namespace UnityScript.UEditor
 {
     public class TagOperation
     {

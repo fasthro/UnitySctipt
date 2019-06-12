@@ -8,13 +8,13 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace UnityScript
+namespace UnityScript.UGUI
 {
-    public class UndoScope : GUI.Scope
+    public class UUndoScope : GUI.Scope
     {
         private int m_currentGroup = 0;
 
-        public UndoScope(string text)
+        public UUndoScope(string text)
         {
             Undo.IncrementCurrentGroup();
             Undo.SetCurrentGroupName(text);
@@ -27,33 +27,33 @@ namespace UnityScript
         }
     }
 
-    public class HorizontalCenteredScope : GUI.Scope
+    public class UHorizontalCenteredScope : GUI.Scope
     {
-        public HorizontalCenteredScope(params GUILayoutOption[] options)
+        public UHorizontalCenteredScope(params GUILayoutOption[] options)
         {
             GUILayout.BeginHorizontal(options);
             GUILayout.FlexibleSpace();
         }
 
-        public HorizontalCenteredScope(GUIStyle style, params GUILayoutOption[] options)
+        public UHorizontalCenteredScope(GUIStyle style, params GUILayoutOption[] options)
         {
             GUILayout.BeginHorizontal(style, options);
             GUILayout.FlexibleSpace();
         }
 
-        public HorizontalCenteredScope(string text, GUIStyle style, params GUILayoutOption[] options)
+        public UHorizontalCenteredScope(string text, GUIStyle style, params GUILayoutOption[] options)
         {
             GUILayout.BeginHorizontal(text, style, options);
             GUILayout.FlexibleSpace();
         }
 
-        public HorizontalCenteredScope(Texture image, GUIStyle style, params GUILayoutOption[] options)
+        public UHorizontalCenteredScope(Texture image, GUIStyle style, params GUILayoutOption[] options)
         {
             GUILayout.BeginHorizontal(image, style, options);
             GUILayout.FlexibleSpace();
         }
 
-        public HorizontalCenteredScope(GUIContent content, GUIStyle style, params GUILayoutOption[] options)
+        public UHorizontalCenteredScope(GUIContent content, GUIStyle style, params GUILayoutOption[] options)
         {
             GUILayout.BeginHorizontal(content, style, options);
             GUILayout.FlexibleSpace();
@@ -66,33 +66,33 @@ namespace UnityScript
         }
     }
 
-    public class VerticalCenteredScope : GUI.Scope
+    public class UVerticalCenteredScope : GUI.Scope
     {
-        public VerticalCenteredScope(params GUILayoutOption[] options)
+        public UVerticalCenteredScope(params GUILayoutOption[] options)
         {
             GUILayout.BeginVertical(options);
             GUILayout.FlexibleSpace();
         }
 
-        public VerticalCenteredScope(GUIStyle style, params GUILayoutOption[] options)
+        public UVerticalCenteredScope(GUIStyle style, params GUILayoutOption[] options)
         {
             GUILayout.BeginVertical(style, options);
             GUILayout.FlexibleSpace();
         }
 
-        public VerticalCenteredScope(string text, GUIStyle style, params GUILayoutOption[] options)
+        public UVerticalCenteredScope(string text, GUIStyle style, params GUILayoutOption[] options)
         {
             GUILayout.BeginVertical(text, style, options);
             GUILayout.FlexibleSpace();
         }
 
-        public VerticalCenteredScope(Texture image, GUIStyle style, params GUILayoutOption[] options)
+        public UVerticalCenteredScope(Texture image, GUIStyle style, params GUILayoutOption[] options)
         {
             GUILayout.BeginVertical(image, style, options);
             GUILayout.FlexibleSpace();
         }
 
-        public VerticalCenteredScope(GUIContent content, GUIStyle style, params GUILayoutOption[] options)
+        public UVerticalCenteredScope(GUIContent content, GUIStyle style, params GUILayoutOption[] options)
         {
             GUILayout.BeginVertical(content, style, options);
             GUILayout.FlexibleSpace();

@@ -7,9 +7,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace UnityScript
+namespace UnityScript.UGUI
 {
-    public class Style
+    public class UStyle
     {
         private static GUIStyle style;
 

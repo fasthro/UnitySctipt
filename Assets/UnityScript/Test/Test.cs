@@ -1,19 +1,27 @@
-﻿using System.Collections;
+﻿/*
+ * @Author: fasthro
+ * @Date: 2019-06-12 20:10:09
+ * @Description: Test
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test : MonoBehaviour
+namespace UnityScript.Test
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Test : MonoBehaviour
     {
-        float a = 1e-05f;
-        Debug.Log(1f + a);
+        // Start is called before the first frame update
+        void Start()
+        {
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

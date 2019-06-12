@@ -9,8 +9,9 @@ using UnityEngine;
 using UnityEditor;
 using System.IO;
 using System;
+using UnityScript.UGUI;
 
-namespace UnityScript
+namespace UnityScript.UEditor
 {
     public class CreateAssetEditor : EditorWindow
     {
@@ -40,27 +41,27 @@ namespace UnityScript
 
         void OnGUI()
         {
-            GUILayout.Label("Class Name: ", Style.Font(GUI.skin.label, TextAnchor.MiddleLeft, 18, FontStyle.Bold));
-            m_className = GUILayout.TextField(m_className, Style.Font(GUI.skin.textField, TextAnchor.MiddleLeft, 16));
+            GUILayout.Label("Class Name: ", UStyle.Font(GUI.skin.label, TextAnchor.MiddleLeft, 18, FontStyle.Bold));
+            m_className = GUILayout.TextField(m_className, UStyle.Font(GUI.skin.textField, TextAnchor.MiddleLeft, 16));
             
             GUILayout.Space(5);
 
-            GUILayout.Label("Save File Name: ", Style.Font(GUI.skin.label, TextAnchor.MiddleLeft, 18, FontStyle.Bold));
-            m_saveFileName = GUILayout.TextField(m_saveFileName, Style.Font(GUI.skin.textField, TextAnchor.MiddleLeft, 16));
+            GUILayout.Label("Save File Name: ", UStyle.Font(GUI.skin.label, TextAnchor.MiddleLeft, 18, FontStyle.Bold));
+            m_saveFileName = GUILayout.TextField(m_saveFileName, UStyle.Font(GUI.skin.textField, TextAnchor.MiddleLeft, 16));
 
             GUILayout.Space(5);
 
-            GUILayout.Label("Save Path: ", Style.Font(GUI.skin.label, TextAnchor.MiddleLeft, 18, FontStyle.Bold));
+            GUILayout.Label("Save Path: ", UStyle.Font(GUI.skin.label, TextAnchor.MiddleLeft, 18, FontStyle.Bold));
             
             GUILayout.BeginHorizontal();
-            m_savePath = GUILayout.TextField(m_savePath, Style.Font(GUI.skin.textField, TextAnchor.MiddleLeft, 16));
-            if (GUILayout.Button("Browse", Style.Font(GUI.skin.button, TextAnchor.MiddleCenter, 16), GUILayout.Width(80)))
+            m_savePath = GUILayout.TextField(m_savePath, UStyle.Font(GUI.skin.textField, TextAnchor.MiddleLeft, 16));
+            if (GUILayout.Button("Browse", UStyle.Font(GUI.skin.button, TextAnchor.MiddleCenter, 16), GUILayout.Width(80)))
             {
                 m_savePath = EditorUtility.OpenFolderPanel("Browse Save *.asset Path", "", "");
             }
             GUILayout.EndHorizontal();
 
-            if (GUILayout.Button("Create", Style.Font(GUI.skin.button, TextAnchor.MiddleCenter, 18), GUILayout.Height(80)))
+            if (GUILayout.Button("Create", UStyle.Font(GUI.skin.button, TextAnchor.MiddleCenter, 18), GUILayout.Height(80)))
             {
                 CreateAsset();
             }
